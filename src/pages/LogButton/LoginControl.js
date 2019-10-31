@@ -17,15 +17,15 @@ export class LoginControl extends Component {
         })
 
     }
-    handleLogoutClick(){
+    handleLoginClick(){
         this.setState({
             isLoggedIn:true
         })
 
     }
     render() {
-        const isLoggedIn = this.state;
-        let button=isLoggedIn?<LoginButton onClick={this.handleLoginClick}/>:<LogoutButton onClick={this.handleLogoutClick}/>
+        const {isLoggedIn} = this.state;
+        let button=isLoggedIn?<LogoutButton onClick={this.handleLogoutClick}/>:<LoginButton onClick={this.handleLoginClick}/>
         return (
             <div>
                 <Greeting isLogin={isLoggedIn}></Greeting>
