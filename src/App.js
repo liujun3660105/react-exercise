@@ -11,6 +11,9 @@ import FilterableProductTable from './pages/filter/FilterableProductTable'
 import Child from './pages/context/Child'
 import {Provider, Consumer} from './AppContext'
 import HocPage from './pages/HocPage/HocPage';
+import HookPage from './pages/hooks/HookPage'
+import UseReducerPage from './pages/useReducerPage/UseReducerPage'
+import UseContextPage from './pages/UseContextPage'
 function App() {
   const numbers = [1,2,3,4];
   const store = {
@@ -22,17 +25,24 @@ function App() {
     
     <div className="App">
 
-      
+      {/* <UseReducerPage></UseReducerPage> */}
       {/* <LoginControl></LoginControl> */}
       {/* <NumberList numbers = {numbers}/> */}
       {/* <Calculator/> */}
       {/* <WelcomeDialog/> */}
       {/* <FilterableProductTable></FilterableProductTable> */}
       {/* <Child {...store}></Child> */}
-      <Provider value = {store}>
+      {/* <Provider value = {store}> */}
         {/* <Child></Child> */}
-        <HocPage></HocPage>
+        {/* <HocPage></HocPage>
+         */}
+
+      {/* </Provider> */}
+      <Provider value= {store}>
+      <UseContextPage></UseContextPage>
       </Provider>
+     
+
 
     </div>
   );
